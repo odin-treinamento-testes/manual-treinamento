@@ -26,8 +26,10 @@ o Claude gratuito no navegador. O método é o mesmo.
 
 1. No claude.ai, crie um Projeto com o nome da sua equipe.
 2. Em **Instruções do projeto**, cole o texto de [instrucoes-do-projeto.md](instrucoes-do-projeto.md).
-3. Em **Conhecimento do projeto**, adicione o repositório da equipe pelo GitHub. Se a org não
-   aparecer, avise o validador: um admin precisa aprovar o app do Claude na org.
+3. Em **Conhecimento do projeto**, clique em **+ → GitHub**. A lista de repositórios pode não
+   mostrar a org: clique no ícone de link, cole a URL do repositório da equipe
+   (`https://github.com/<org>/<turma>-equipe-NN`), marque a raiz e clique em **Add files**. Se der
+   erro de acesso, avise o validador: o app do Claude precisa estar instalado na org.
 
 O Claude do Projeto só **lê** o repositório. Ele não escreve, não abre PR e não vê o histórico.
 Depois de cada `git push`, atualize o repositório no conhecimento do Projeto para o Claude ver a
