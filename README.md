@@ -12,7 +12,7 @@ principal.
 
 | Repositório | O que é |
 |---|---|
-| `manual-treinamento` | Este manual: a trilha do trainee, os [conhecimentos](conhecimentos/) (módulos com vídeo e explicação) e o script de cada turma |
+| `manual-treinamento` | Este manual: a trilha do trainee, os [conhecimentos](conhecimentos/) (módulos com vídeo e explicação), o [case de cada turma](turmas/) e o script que cria a turma |
 | `skills-navegador` | As skills de plano, sessão e ata para o Claude gratuito |
 | `boilerplate-treinamento` | O template das equipes, copiado do `boilerplate-projetogenerico` |
 | `<semestre>-<treinamento>-equipe-NN` | Um repositório por equipe, por exemplo `2026-2-t2-equipe-01` |
