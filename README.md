@@ -12,7 +12,7 @@ principal.
 
 | Repositório | O que é |
 |---|---|
-| `manual-treinamento` | Este manual: a trilha do trainee e o script de cada turma |
+| `manual-treinamento` | Este manual: a trilha do trainee, os [conhecimentos](conhecimentos/) (módulos com vídeo e explicação) e o script de cada turma |
 | `skills-navegador` | As skills de plano, sessão e ata para o Claude gratuito |
 | `boilerplate-treinamento` | O template das equipes, copiado do `boilerplate-projetogenerico` |
 | `<semestre>-<treinamento>-equipe-NN` | Um repositório por equipe, por exemplo `2026-2-t2-equipe-01` |
@@ -30,8 +30,12 @@ Cada turma tem um tópico (`2026-2-t2`). Na página de repositórios da org, o f
 
 ## Times
 
-- `<turma>-equipe-NN`: os trainees da equipe; acessam só o repositório dela.
+- `<turma>`: o time da turma (ex.: `2026-2-t2`); só lê o `manual-treinamento` e o
+  `skills-navegador`.
+- `<turma>-equipe-NN`: os trainees da equipe, dentro do time da turma; escrevem só no repositório
+  da equipe.
 - `validadores`: acessam os repositórios da turma em curso e aprovam os PRs (`CODEOWNERS`).
 
-Os times das equipes não ficam dentro do time `validadores`. Time filho herda o acesso do pai, e
-cada trainee passaria a ver os repositórios das outras equipes.
+A permissão básica da org é **nenhuma**: membro só vê o que o time dele libera. Time filho herda o
+acesso do pai, por isso as equipes ficam dentro do time da turma (que só dá leitura aos repos
+fixos) e nunca dentro de `validadores`, que veria os repositórios de todas as equipes.
