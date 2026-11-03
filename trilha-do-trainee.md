@@ -15,10 +15,9 @@ o Claude gratuito no navegador. O método é o mesmo.
 ## 0. Uma vez, antes do primeiro dia
 
 1. Aceite o convite da org no e-mail do GitHub.
-2. Instale o Git e o VS Code (tutorial do treinamento) e clone o repositório da equipe:
-   ```powershell
-   git clone https://github.com/<org>/<turma>-equipe-NN.git
-   ```
+2. Instale o Git, o VS Code, o Python e o `uv`, e clone o repositório da equipe. Passo a passo
+   em [setup-do-ambiente.md](setup-do-ambiente.md) (equipes de Ciência de Dados). O
+   **primeiro PR da equipe**, que inicializa o projeto, também está lá.
 3. No claude.ai, ligue **Configurações → Capacidades → Execução de código e criação de arquivos**
    e instale as skills do repositório `skills-navegador` (passo a passo no README dele).
 
@@ -58,6 +57,7 @@ Nada entra na `main` sem o validador.
 
 ```powershell
 git switch -c <tipo>/<assunto>      # ex.: feat/extracao-farmacia-x
+python tools/check.py               # o mesmo que o CI roda: o CONTRATO tem que estar OK
 git add <arquivos>
 git commit -m "<o que mudou>"
 git push -u origin <tipo>/<assunto>
@@ -70,5 +70,6 @@ mesma branch e faça push de novo.
 
 - Colar senha, token ou chave de API no chat ou no repositório. Credencial fica no `.env`, que o
   `.gitignore` já deixa de fora.
-- Subir para o Claude ou para o repositório dado pessoal de alguém.
+- Subir para o Claude ou para o repositório dado pessoal de alguém. Dados do case ficam em
+  `pipeline/data/raw/` etc., que o CI barra se forem versionados.
 - Aceitar código do Claude sem entender e sem rodar.

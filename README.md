@@ -5,16 +5,13 @@ org principal (`ODIN-NDados-Poli-Junior`): repositório criado do boilerplate, c
 `context/`, tudo por PR revisado. Quem termina o treinamento e vira analista entra na org
 principal.
 
-> **Org de teste.** Esta org existe para validar a proposta com a Artefato. Se aprovada, a org de
-> verdade é da Poli Júnior, e esta é apagada.
-
 ## O que tem aqui
 
 | Repositório | O que é |
 |---|---|
 | `manual-treinamento` | Este manual: a trilha do trainee, os [conhecimentos](conhecimentos/) (módulos com vídeo e explicação), o [case de cada turma](turmas/) e o script que cria a turma |
 | `skills-navegador` | As skills de plano, sessão e ata para o Claude gratuito |
-| `boilerplate-treinamento` | O template das equipes, copiado do `boilerplate-projetogenerico` |
+| `boilerplate-treinamento` | O template das equipes de Ciência de Dados, copiado do `boilerplate-CD` (pipeline, testes, `tools/check.py`, `docs/`) |
 | `<semestre>-<treinamento>-equipe-NN` | Um repositório por equipe, por exemplo `2026-2-t2-equipe-01` |
 
 Cada turma tem um tópico (`2026-2-t2`). Na página de repositórios da org, o filtro
@@ -24,7 +21,7 @@ Cada turma tem um tópico (`2026-2-t2`). Na página de repositórios da org, o f
 
 | Papel | Comece por |
 |---|---|
-| Trainee | [Trilha do trainee](trilha-do-trainee.md) |
+| Trainee | [Setup do ambiente](setup-do-ambiente.md), depois a [trilha do trainee](trilha-do-trainee.md) |
 | Validador | [Trilha do trainee](trilha-do-trainee.md), para saber o que a equipe faz, e revise os PRs pelo time `validadores` |
 | Dono da org | [Script da turma](scripts/criar-turma.sh) |
 
