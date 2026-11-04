@@ -8,7 +8,7 @@ comandos são em PowerShell.
 
 | Ferramenta | Para quê | Como conferir |
 |---|---|---|
-| Git | clonar, commitar, abrir PR | `git --version` |
+| Git | clonar, commitar, dar push | `git --version` |
 | VS Code | editar os arquivos | abre pelo menu Iniciar |
 | Python 3.11 ou mais novo (python.org, marcando **Add python.exe to PATH**) | rodar `tools/init.py` e `tools/check.py`, que usam só a biblioteca padrão | `python --version` |
 | `uv` | cria o ambiente do projeto (baixa o Python 3.11 do projeto sozinho) e roda o pipeline | `uv --version` |
@@ -34,29 +34,28 @@ python tools/check_estrutura.py
 
 Deve aparecer `OK: contrato respeitado`.
 
-## 3. Primeiro PR da equipe: inicializar o projeto
+## 3. Primeiro commit da equipe: inicializar o projeto
 
 **Só uma pessoa da equipe faz isso**, e uma única vez. O `init` renomeia e apaga arquivos, e
 depois some do repositório.
 
 1. Confira que a árvore está limpa: `git status` sem nada pendente.
-2. Crie a branch: `git switch -c feat/inicializar-projeto`.
-3. Rode `python tools/init.py` e responda:
+2. Rode `python tools/init.py` e responda:
    - **nome do projeto**: o nome do case;
    - **Vai usar Databricks?**: **N** (o treinamento roda local);
    - **nome do primeiro modelo**: em `snake_case`, conforme o case (ex.: `churn_mensal`).
-4. Instale o ambiente e rode os testes:
+3. Instale o ambiente e rode os testes:
    ```powershell
    uv sync
    uv run pytest
    ```
-5. No `CLAUDE.md`, troque os `<...>` da seção **Contexto geral do projeto** pelo que o enunciado
+4. No `CLAUDE.md`, troque os `<...>` da seção **Contexto geral do projeto** pelo que o enunciado
    em `context/00_case/` diz (cliente, objetivo, escopo, duração).
-6. Rode o portão do CI localmente: `python tools/check.py`. O bloco **CONTRATO** precisa estar
+5. Rode o portão do CI localmente: `python tools/check.py`. O bloco **CONTRATO** precisa estar
    `OK`; o **CONSELHO** só avisa.
-7. Commit, push e PR (fluxo na [trilha do trainee](trilha-do-trainee.md)). O validador aprova.
+6. Commit e push na `main` (fluxo na [trilha do trainee](trilha-do-trainee.md)).
 
-Quando a primeira pessoa mergear, o resto da equipe dá `git pull` e segue de lá.
+Quando a primeira pessoa der push, o resto da equipe dá `git pull` e segue de lá.
 
 ## 4. Rodar o pipeline
 

@@ -71,7 +71,7 @@ for i in $(seq 1 "$N"); do
   criar_time "$EQUIPE" "$TURMA_ID"
   gh api -X PUT "orgs/$ORG/teams/$EQUIPE/repos/$ORG/$EQUIPE" -f permission=push >/dev/null
 
-  # Validadores: aprovam os PRs de todas as equipes da turma.
+  # Validadores: acessam o repositório de todas as equipes da turma para aprovar as etapas.
   gh api -X PUT "orgs/$ORG/teams/validadores/repos/$ORG/$EQUIPE" -f permission=maintain >/dev/null
 
   echo "ok  $EQUIPE"

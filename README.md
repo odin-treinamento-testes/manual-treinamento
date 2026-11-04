@@ -2,8 +2,9 @@
 
 O ODIN dos treinamentos do NDados. Os trainees trabalham aqui do jeito que o núcleo trabalha na
 org principal (`ODIN-NDados-Poli-Junior`): repositório criado do boilerplate, contexto em
-`context/`, tudo por PR revisado. Quem termina o treinamento e vira analista entra na org
-principal.
+`context/` e cada etapa aprovada pelo validador. A diferença: aqui a equipe sobe direto na
+`main`, sem PR. Quem termina o treinamento e vira analista entra na org principal, onde todo
+código entra por PR revisado.
 
 ## O que tem aqui
 
@@ -22,7 +23,7 @@ Cada turma tem um tópico (`2026-2-t2`). Na página de repositórios da org, o f
 | Papel | Comece por |
 |---|---|
 | Trainee | [Setup do ambiente](setup-do-ambiente.md), depois a [trilha do trainee](trilha-do-trainee.md) |
-| Validador | [Trilha do trainee](trilha-do-trainee.md), para saber o que a equipe faz, e revise os PRs pelo time `validadores` |
+| Validador | [Trilha do trainee](trilha-do-trainee.md), para saber o que a equipe faz, e aprove o entregável de cada etapa no repositório da equipe (acesso pelo time `validadores`) |
 | Dono da org | [Script da turma](scripts/criar-turma.sh) |
 
 ## Times
@@ -31,7 +32,7 @@ Cada turma tem um tópico (`2026-2-t2`). Na página de repositórios da org, o f
   `skills-navegador`.
 - `<turma>-equipe-NN`: os trainees da equipe, dentro do time da turma; escrevem só no repositório
   da equipe.
-- `validadores`: acessam os repositórios da turma em curso e aprovam os PRs (`CODEOWNERS`).
+- `validadores`: acessam os repositórios da turma em curso e aprovam o entregável de cada etapa.
 
 A permissão básica da org é **nenhuma**: membro só vê o que o time dele libera. Time filho herda o
 acesso do pai, por isso as equipes ficam dentro do time da turma (que só dá leitura aos repos
